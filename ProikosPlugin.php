@@ -103,7 +103,8 @@ class ProikosPlugin extends Plugin
             area VARCHAR(250) NULL,
             department VARCHAR(250) NULL,
             headquarters VARCHAR(250) NULL,
-            code_reference VARCHAR(250) NULL
+            code_reference VARCHAR(250) NULL,
+            company_headquarter VARCHAR(250) NULL
         )";
         Database::query($sql);
 
@@ -429,6 +430,7 @@ class ProikosPlugin extends Plugin
         //$nameHeadquarters = self::getHeadquartersName($values['headquarters']);
         $nameManagement = '-';
         $nameHeadquarters = '-';
+        $companyHeadquarter = !empty($values['company_headquarter']) ? $values['company_headquarter'] : '';
         $params = [
             'id' => $values['user_id'],
             'user_id' => $values['user_id'],
@@ -448,7 +450,8 @@ class ProikosPlugin extends Plugin
             'area' => $nameArea,
             'department' => $nameManagement,
             'headquarters' => $nameHeadquarters,
-            'code_reference' => $values['code_reference']
+            'code_reference' => $values['code_reference'],
+            'company_headquearter' => $companyHeadquarter,
         ];
         $id = Database::insert($table, $params);
         if ($id > 0) {

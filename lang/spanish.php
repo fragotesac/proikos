@@ -70,3 +70,4 @@ $strings['Status'] = 'Estado';
 $strings['ViewReport'] = 'Visualizar reporte';
 $strings['NumberOfUsers'] = 'N° número de usuarios';
 $strings['PercentageOfUsers'] = '% porcentaje de usuarios';
+$strings['CompanyHeadquarter'] = 'Sede';
