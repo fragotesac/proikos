@@ -451,7 +451,7 @@ class ProikosPlugin extends Plugin
             'department' => $nameManagement,
             'headquarters' => $nameHeadquarters,
             'code_reference' => $values['code_reference'],
-            'company_headquearter' => $companyHeadquarter,
+            'company_headquarter' => $companyHeadquarter,
         ];
         $id = Database::insert($table, $params);
         if ($id > 0) {
